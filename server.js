@@ -134,6 +134,17 @@ app.get('/view-emails', (req, res) => {
     });
 });
 
+app.get('/view-send', (req, res) => {
+    const filePath = path.join(__dirname, 'emails', 'send.csv');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return res.status(500).send('Unable to read the file.');
+        }
+        res.type('text/plain').send(data);
+    });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
