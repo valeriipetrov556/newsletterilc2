@@ -11,9 +11,12 @@ app.use(bodyParser.json());
 
 const mailAccounts = [
     {user: 'target@support-internationallegalcollege.com', pass: 'G1I5xXLmDy'},
-    {user: 'support@support-internationallegalcollege.com', pass: 'aynF2l2y4J'},
     {user: 'promo@support-internationallegalcollege.com', pass: 'gCI8hCXnyy'},
-    {user: 'promotion@support-internationallegalcollege.com', pass: 'V0by9f3eds'},
+    {user: 'ricardo.willis@support-internationallegalcollege.com', pass: 'k26Mw9GLms'},
+    {user: 'benjamin.griffin@support-internationallegalcollege.com', pass: 'mQLgEH68N0'},
+    {user: 'christopher.reynolds@support-internationallegalcollege.com', pass: 'LC1JMexpsK'},
+    {user: 'donald.robinson@support-internationallegalcollege.com', pass: 'iQCOLdm6zh'},
+    {user: 'robert.hart@support-internationallegalcollege.com', pass: 'Vj6XuY2t8D'},
 ];
 
 const templates = ['template2.html', 'template3.html'];
