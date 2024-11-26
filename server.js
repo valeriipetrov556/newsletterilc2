@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 const mailAccounts = [
     {user: 'target@support-internationallegalcollege.com', pass: 'G1I5xXLmDy'},
     {user: 'support@support-internationallegalcollege.com', pass: 'aynF2l2y4J'},
-    {user: 'info@support-internationallegalcollege.com', pass: 'oxhZtDDSPj'},
     {user: 'promo@support-internationallegalcollege.com', pass: 'gCI8hCXnyy'},
     {user: 'promotion@support-internationallegalcollege.com', pass: 'V0by9f3eds'},
 ];
@@ -91,7 +90,7 @@ function sendEmails() {
             .replace('{{email}}', emailToSend)
             .replace('{{email2}}', emailToSend)
             .replace('{{email3}}', emailToSend);
-        
+
         const mailOptions = {
             from: mailAccounts[currentMailIndex].user,
             to: emailToSend,
@@ -115,7 +114,7 @@ function sendEmails() {
             currentMailIndex = (currentMailIndex + 1) % mailAccounts.length;
             currentTemplateIndex = (currentTemplateIndex + 1) % templates.length;
 
-            const delay = Math.random() * (15000 - 10000) + 10000;
+            const delay = Math.random() * (17000 - 12000) + 12000;
             setTimeout(sendEmails, delay);
         });
     });
