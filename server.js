@@ -87,8 +87,11 @@ function sendEmails() {
             return;
         }
 
-        const renderedTemplate = data.replace('{{email}}', emailToSend);
-
+        const renderedTemplate = data
+            .replace('{{email}}', emailToSend)
+            .replace('{{email2}}', emailToSend)
+            .replace('{{email3}}', emailToSend);
+        
         const mailOptions = {
             from: mailAccounts[currentMailIndex].user,
             to: emailToSend,
@@ -112,7 +115,7 @@ function sendEmails() {
             currentMailIndex = (currentMailIndex + 1) % mailAccounts.length;
             currentTemplateIndex = (currentTemplateIndex + 1) % templates.length;
 
-            const delay = Math.random() * (11000 - 8000) + 8000;
+            const delay = Math.random() * (15000 - 10000) + 10000;
             setTimeout(sendEmails, delay);
         });
     });
